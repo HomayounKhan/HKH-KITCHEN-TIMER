@@ -1,0 +1,130 @@
+body {
+  background-color: rgb(4, 164, 217);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.timer-container {
+  background-color: rgb(30, 96, 229);
+  padding: 3rem;
+  border-radius: 60px;
+  text-align: center;
+  box-shadow: 0 8px 10px rgba(8, 0, 0, 0.1);
+  max-width: 90%;
+  width: 700px;
+}
+
+.timer-title {
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bolder;
+  font-size: 4rem;
+  color: #1315b6;
+  text-shadow: 0 0 20px #01e1ff;
+}
+
+.time-inputs {
+  display: flex;
+  justify-content: center;
+  border-radius: 6px;
+  padding: 3px;
+  margin-top: 1rem;
+}
+
+.time-inputs input {
+  margin: 0 0.2rem;
+}
+
+.timer-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.timer-buttons button {
+  margin: 0 0.2rem;
+}
+
+#alarm {
+  display: none;
+}
+
+input:focus {
+  outline: none;
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+button {
+  font-size: 16px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 9px;
+  background-color: #1315b6;
+  text-shadow: 0 0 20px #010eff;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #21c3dc;
+}
+
+button:disabled {
+  background-color: #e8dede;
+  cursor: default;
+}
+
+button:disabled:hover {
+  background-color: #a0a0a0;
+}
+
+@media screen and (max-width: 767px) {
+  .timer-title {
+    font-size: 2.5rem;
+  }
+
+  input {
+    font-size: 13px;
+    padding: 5px 8px;
+    width: 50px;
+  }
+
+  button {
+    font-size: 13px;
+    padding: 5px 8px;
+  }
+
+  .timer-container {
+    padding: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .timer-title {
+    font-size: 2rem;
+  }
+
+  input {
+    font-size: 12px;
+    padding: 4px 6px;
+    width: 40px;
+  }
+
+  button {
+    font-size: 12px;
+    padding: 4px 6px;
+  }
+
+  .timer-container {
+    padding: 1rem;
+  }
+}
