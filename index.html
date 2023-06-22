@@ -3,18 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kitchen Timer</title>
+  <title>HKH Kitchen Timer</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div class="timer-container">
     <h1 class="timer-title">Kitchen Timer</h1>
     <div class="kitchen-timer-container"></div>
+    <!-- Time Inputs -->
     <div class="time-inputs">
-      <input type="number" id="hours" class="time-input" placeholder="Hours">
-      <input type="number" id="minutes" class="time-input" placeholder="Minutes">
-      <input type="number" id="seconds" class="time-input" placeholder="Seconds">
+      <input type="number" id="hours" name="hours" class="time-input" placeholder="Hours" title="Enter hours">
+      <input type="number" id="minutes" name="minutes" class="time-input" placeholder="Minutes" title="Enter minutes">
+      <input type="number" id="seconds" name="seconds" class="time-input" placeholder="Seconds" title="Enter seconds">
     </div>
+    <!-- Timer Buttons -->
     <div class="timer-buttons">
       <button id="start">Start</button>
       <button id="pause">Pause</button>
