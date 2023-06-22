@@ -10,15 +10,17 @@ const alarm = document.getElementById("alarm");
 let animationFrame;
 let paused = false;
 
+// Play alarm sound and reset the timer
 function playAlarm() {
-    cancelAnimationFrame(animationFrame);
-    alarm.muted = false; // Unmute the audio before playing it
-    alarm.play();
-    hoursInput.value = "";
-    minutesInput.value = "";
-    secondsInput.value = "";
-  }
+  cancelAnimationFrame(animationFrame);
+  alarm.muted = false; // Unmute the audio before playing it
+  alarm.play();
+  hoursInput.value = "";
+  minutesInput.value = "";
+  secondsInput.value = "";
+}
 
+// Update timer display
 function updateTimer() {
   const now = new Date().getTime();
   const remainingTime = endTime - now;
@@ -42,6 +44,7 @@ function updateTimer() {
 
 let endTime;
 
+// Start timer event listener
 startBtn.addEventListener("click", () => {
   const hours = parseInt(hoursInput.value) || 0;
   const minutes = parseInt(minutesInput.value) || 0;
@@ -56,10 +59,12 @@ startBtn.addEventListener("click", () => {
   updateTimer();
 });
 
+// Pause timer event listener
 pauseBtn.addEventListener("click", () => {
   paused = true;
 });
 
+// Reset timer event listener
 resetBtn.addEventListener("click", () => {
   cancelAnimationFrame(animationFrame);
   hoursInput.value = "";
@@ -67,6 +72,7 @@ resetBtn.addEventListener("click", () => {
   secondsInput.value = "";
 });
 
+// Stop alarm event listener
 stopAlarmBtn.addEventListener("click", () => {
   alarm.pause();
   alarm.currentTime = 0;
