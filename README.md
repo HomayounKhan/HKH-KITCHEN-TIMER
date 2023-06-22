@@ -27,6 +27,7 @@ The website has been tested with the following web browsers:
 
 - Chrome 
 - Firefox
+- Microsoft Edge
 
 To test the timer, simply open the `index.html` file in your preferred web browser and interact with the user interface.
 
